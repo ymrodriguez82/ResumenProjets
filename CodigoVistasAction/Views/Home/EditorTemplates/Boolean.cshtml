@@ -1,0 +1,15 @@
+﻿@model Boolean?
+
+@if (Model!=null && Model.Value)
+    {
+        <input type="text" value="Si"
+           id="@ViewData.TemplateInfo.GetFullHtmlFieldId("")"
+           name="@ViewData.TemplateInfo.GetFullHtmlFieldName("")" />
+    
+    }
+else
+    {
+       <input type="text" value="No"
+                   id="@ViewData.TemplateInfo.GetFullHtmlFieldId("")"
+                   name="@ViewData.TemplateInfo.GetFullHtmlFieldName("")" />
+    }

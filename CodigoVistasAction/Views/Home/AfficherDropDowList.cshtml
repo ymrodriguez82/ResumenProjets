@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AfficherDropDowList</title>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h4>Drop Down liste normal</h4>
+            <label>Escoja una opcion</label>
+            @Html.DropDownList("miDropDownList", (List<SelectListItem>)ViewBag.listado)
+        </div>
+        <br />
+
+        <div>
+            <h4>Drop Down liste sin modelo</h4>
+            <label>Escoja una opcion</label>
+            @Html.DropDownList("miDropDownList", (List<SelectListItem>)ViewBag.listadoSinModeleDropDown)
+        </div>
+
+    </div>
+
+    
+
+</body>
+</html>

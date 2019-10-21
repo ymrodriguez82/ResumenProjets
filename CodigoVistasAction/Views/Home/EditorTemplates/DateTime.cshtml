@@ -1,0 +1,21 @@
+﻿@* EditorTemplate:
+    el signo ? quiere decir que la fecha en algun momento puede ser null*@
+
+@model DateTime?
+
+@if (!Model.HasValue)
+
+{@*si la date viene si valor porque es una creacion vamos a enviar id y name como identidficadores para capturarlos en el action *@
+
+<input type="date" id="@ViewData.TemplateInfo.GetFullHtmlFieldId("")"
+       name="@ViewData.TemplateInfo.GetFullHtmlFieldName("")" />
+
+}
+else
+{
+@*si la date viene con valor vamos affichar su valor value y vamos a enviar id y name para capturarlos en el action*@
+
+<input type="date" value="@Model.Value.ToString("yyyy-MM-dd")"
+       id="@ViewData.TemplateInfo.GetFullHtmlFieldId("")"
+       name="@ViewData.TemplateInfo.GetFullHtmlFieldName("")" />
+}

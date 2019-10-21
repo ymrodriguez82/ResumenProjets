@@ -1,0 +1,15 @@
+﻿@model BasicExample.Models.Pelicula
+
+@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Information sobre una pelicula.</p>
+
+<h4>@Model.Titulo</h4>
+<h5>Duration: @Model.Duracion</h5>
+<h5>Date: @Model.Publicacion.ToString("dd/MM/yyyy")</h5>
+<h5>Country: @Model.Pais</h5>
+

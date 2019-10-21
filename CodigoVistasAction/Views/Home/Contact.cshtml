@@ -1,0 +1,9 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+@* NomLink, Action, Controleur, ObjetRoutesValues, ObjetHtmlAttributes*@
+
+@Html.ActionLink("Gooo", "About", "Home", new {edad = 27, nom = "yuni" }, new { value = "value1", @class = "btn btn-danger" })

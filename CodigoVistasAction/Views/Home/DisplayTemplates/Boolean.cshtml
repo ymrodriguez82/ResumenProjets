@@ -1,0 +1,16 @@
+﻿
+@model Boolean?
+
+@*El nombre de la View (Boolean) es el nombre del modelo(boolean), si en la vista tengo algun boolean entonces lo voy afichar
+    segun estas reglas...
+    si el boolean es verdadero vamos affichar si sino no*@
+
+
+@if (Model!=null && Model.Value)
+{
+    <span>Si</span>
+}
+else
+{
+    <span>No</span>
+}

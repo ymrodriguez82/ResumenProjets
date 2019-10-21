@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information.</p>
+
+@* Llamaos al partial view y le pasamos el modelo junto a al viewbag con la lista que viene de la accion*@
+
+@Html.Partial("_ListadoPersonas", (List<FormulariosRaizorVistas.Models.Persona>)ViewBag.ListadoPersonas)

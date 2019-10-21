@@ -1,0 +1,62 @@
+﻿@model List<BasicExample.Models.Pelicula>
+
+
+
+@{
+    ViewBag.Title = "Contact";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<address>
+    One Microsoft Way<br />
+    Redmond, WA 98052-6399<br />
+    <abbr title="Phone">P:</abbr>
+    425.555.0100
+</address>
+
+<address>
+    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
+    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+</address>
+
+
+<div>
+    Mostrando en cartelera @Model.Count peliculas
+</div>
+
+<table class="table">
+
+    <thead>
+        <tr>
+            <th>Titulo</th>
+            <th>Duracion</th>
+            <th>Pais</th>
+            <th>Publicacion</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var pelicula in Model)
+        {
+            var claseFila = string.Empty;
+
+            @*claseFila = (pelicula.Duracion > 140) ? "danger" : string.Empty;*@
+
+            if (pelicula.Duracion > 140)
+            {
+                claseFila = "danger";
+            }
+
+            <tr class="@claseFila">
+                <td>@pelicula.Titulo</td>
+                <td>@pelicula.Duracion</td>
+                <td>@pelicula.Pais</td>
+                <td>@pelicula.Publicacion.ToString("dd/MM/yyyy")</td>
+            </tr>
+        }
+
+    </tbody>
+
+
+</table>
